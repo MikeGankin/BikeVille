@@ -10,7 +10,7 @@ const mySwiper = new Swiper('.swiper-container', {
       prevEl: '.swiper-button-prev',
     }
 });
-
+const timeout = 50;
 const swiperWrapper = document.querySelector('.swiper-wrapper');
 
 swiperWrapper.addEventListener('mouseover', (e) => {
@@ -18,9 +18,9 @@ swiperWrapper.addEventListener('mouseover', (e) => {
 
   if (target.className === 'slide-content') {
     let parent = target.closest('.swiper-slide');
-    let parentImg = parent.querySelector('.slide-img');
+    let img = parent.querySelector('.slide-img');
     target.classList.add('hovered');
-    parentImg.style.transform = 'translate(-50%, -50%) scale(1.3)';
+    img.style.transform = 'translate(-50%, -50%) scale(1.3)';
   }
 });
 
@@ -28,9 +28,6 @@ swiperWrapper.addEventListener('mouseout', (e) => {
   let target = e.target;
  
   if (target.className === 'slide-content') {
-    let parent = target.closest('.swiper-slide');
-    let parentImg = parent.querySelector('.slide-img');
-    target.classList.remove('hovered');
-    parentImg.style.transform = '';
+    alert();
   }
 });
